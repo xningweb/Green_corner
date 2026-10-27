@@ -143,8 +143,7 @@ footer {
 /* Inner page hero */
 
 .page-hero {
-  height: 50px;
-  min-height: 0;
+  min-height: auto;
   padding: 40px 20px 20px;
   background-color: #ADD8E6;
 }
