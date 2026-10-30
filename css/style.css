@@ -67,21 +67,6 @@ nav a:hover {
   max-width: 500px;
 }
 
-/* Hero button */
-
-.hero a {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 14px 28px;
-  background-color: #527A58;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.hero a:hover {
-  background-color: #3E6044;
-}
 
 /* Footer */
 
