@@ -237,3 +237,58 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Homepage Hero */
+
+.home-hero {
+  height: 460px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../photos/vegetables.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1200px auto;
+}
+
+.home-hero-title {
+  margin: 0;
+  padding: 25px 40px;
+
+  background-color: #F7F8F2;
+  color: #344B3F;
+
+  font-family: cursive;
+  font-size: 76px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.home-hero-title span {
+  display: inline;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .home-hero {
+    height: 460px;
+    background-size: 1200px auto;
+    background-position: center;
+  }
+
+  .home-hero-title {
+    font-size: 54px;
+    padding: 20px;
+  }
+
+  .home-hero-title span {
+    display: block;
+  }
+
+}
