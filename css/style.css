@@ -80,6 +80,7 @@ footer {
 /* Mobile layout */
 
 @media (max-width: 600px) {
+  
 
   header {
     flex-direction: column;
@@ -272,10 +273,23 @@ footer {
   display: inline;
 }
 
-/* Mobile */
 
 @media (max-width: 600px) {
 
+  .home-hero {
+    height: 460px;
+  }
+
+  .home-hero-title {
+    font-size: 54px;
+    padding: 20px;
+  }
+
+  .home-hero-title span {
+    display: block;
+  }
+
+}
   .home-hero {
     height: 460px;
     background-size: 1200px auto;
