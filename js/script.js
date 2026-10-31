@@ -4,42 +4,63 @@ newsCards.forEach((card) => {
   const summary = card.querySelector("summary");
   const content = card.querySelector(".news-content");
 
+  let animating = false;
+
   summary.addEventListener("click", (event) => {
     event.preventDefault();
 
-    if (card.open) {
-      // Close the card
-      const animation = content.animate(
-        [
-          { height: `${content.offsetHeight}px`, opacity: 1 },
-          { height: "0px", opacity: 0 }
-        ],
-        {
-          duration: 300,
-          easing: "ease-in-out"
-        }
-      );
+    if (animating) return;
 
-      animation.onfinish = () => {
-        card.open = false;
-      };
+    animating = true;
 
-    } else {
-      // Open the card
+    const opening = !card.open;
+    const startHeight = card.offsetHeight;
+
+    if (opening) {
       card.open = true;
-
-      const fullHeight = content.offsetHeight;
-
-      content.animate(
-        [
-          { height: "0px", opacity: 0 },
-          { height: `${fullHeight}px`, opacity: 1 }
-        ],
-        {
-          duration: 300,
-          easing: "ease-in-out"
-        }
-      );
     }
+
+    const endHeight = opening
+      ? card.scrollHeight
+      : summary.offsetHeight + 2;
+
+    const animation = card.animate(
+      [
+        { height: `${startHeight}px` },
+        { height: `${endHeight}px` }
+      ],
+      {
+        duration: 450,
+        easing: "cubic-bezier(0.25, 0.8, 0.25, 1)"
+      }
+    );
+
+    content.animate(
+      opening
+        ? [
+            { opacity: 0, transform: "translateY(-8px)" },
+            { opacity: 1, transform: "translateY(0)" }
+          ]
+        : [
+            { opacity: 1, transform: "translateY(0)" },
+            { opacity: 0, transform: "translateY(-8px)" }
+          ],
+      {
+        duration: 350,
+        easing: "ease-out"
+      }
+    );
+
+    animation.onfinish = () => {
+      if (!opening) {
+        card.open = false;
+      }
+
+      animating = false;
+    };
+
+    animation.oncancel = () => {
+      animating = false;
+    };
   });
 });
