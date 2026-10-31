@@ -235,7 +235,7 @@ footer {
   align-items: center;
 
   background-image: url("../photos/vegetables.png");
-  background-position: center;
+  background-position: center 100px;
   background-repeat: no-repeat;
   background-size: 1200px auto;
 }
@@ -264,7 +264,7 @@ footer {
   .home-hero {
     height: 460px;
     background-size: 1200px auto;
-    background-position: center;
+    background-position: center 100px;
   }
 
   .home-hero-title {
