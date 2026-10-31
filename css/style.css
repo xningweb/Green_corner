@@ -290,23 +290,6 @@ footer {
   }
 
 }
-  .home-hero {
-    height: 460px;
-    background-size: 1200px auto;
-    background-position: center 100px;
-  }
-
-  .home-hero-title {
-    font-size: 54px;
-    padding: 20px;
-  }
-
-  .home-hero-title span {
-    display: block;
-  }
-
-}
-
 
 
 /* News section */
