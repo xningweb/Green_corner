@@ -248,7 +248,9 @@ footer {
   background-repeat: repeat-x;
   background-position: center center;
   background-size: auto 625px;
+  bakcground-position: calc(50% + 140px) calc(50% - 65px);
 
+  
   pointer-events: none;
 }
 
@@ -261,7 +263,7 @@ footer {
   margin: 0;
   padding: 0 20px;
 
-  transform: translateY(-115px);
+  transform: translateY(5px);
 
   color: #344B3F;
   background-color: transparent;
