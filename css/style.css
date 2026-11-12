@@ -247,7 +247,7 @@ footer {
   background-image: url("../photos/vegetables.png");
   background-repeat: repeat-x;
   background-size: auto 625px;
-  background-position: calc(50% + 120px) calc(50%px);
+  background-position: calc(50%px) calc(50%px);
 
   
   pointer-events: none;
