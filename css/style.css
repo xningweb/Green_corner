@@ -225,11 +225,12 @@ footer {
 }
 
 
+
 /* Homepage Hero */
 
 .home-hero {
-  height: 460px;
   position: relative;
+  height: 600px;
   overflow: hidden;
 
   display: flex;
@@ -237,50 +238,58 @@ footer {
   align-items: center;
 }
 
-.home-hero-vegetables {
+/* Repeating vegetable illustration */
+
+.home-hero-illustration {
   position: absolute;
+  inset: 0;
 
-  width: 1200px;
-  max-width: none;
-  height: auto;
+  background-image: url("../photos/vegetables.png");
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-size: auto 387px;
 
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
+/* Hero title */
 
 .home-hero-title {
   position: relative;
   z-index: 1;
 
   margin: 0;
-  padding: 25px 40px;
+  padding: 0 20px;
 
-  background-color: transparent;
+  transform: translateY(45px);
+
   color: #344B3F;
+  background-color: transparent;
 
-  font-family: cursive;
-  font-size: 76px;
+  font-family: Arial, sans-serif;
+  font-size: clamp(42px, 5vw, 76px);
   font-weight: 400;
+  line-height: 1.1;
   text-align: center;
+  white-space: nowrap;
 }
 
 .home-hero-title span {
   display: inline;
 }
 
+/* Mobile */
 
 @media (max-width: 600px) {
 
   .home-hero {
-    height: 460px;
+    height: 500px;
   }
 
   .home-hero-title {
-    font-size: 54px;
-    padding: 20px;
+    font-size: clamp(38px, 9vw, 54px);
+    transform: translateY(35px);
+    white-space: normal;
   }
 
   .home-hero-title span {
