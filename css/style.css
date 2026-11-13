@@ -516,6 +516,28 @@ footer {
   gap: 16px;
 }
 
+
+/* News links */
+
+.news-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding-bottom: 4px;
+
+  font-size: 15px;
+  color: #344B3F;
+  text-decoration: none;
+  border-bottom: 1px solid #344B3F;
+
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.news-link:hover {
+  color: #7A9B76;
+  border-color: #7A9B76;
+}
+
+
 /* News cards */
 
 .news-card {
