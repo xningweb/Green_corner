@@ -11,16 +11,19 @@ body {
   color: #344B3F;
 }
 
+
 /* Header */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 8%;
+
+  padding: 24px 7.5%;
 }
 
 header h1 {
+  margin: 0;
   font-size: 24px;
   font-weight: 600;
 }
@@ -33,14 +36,21 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
   color: #344B3F;
   font-size: 15px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
 }
 
 nav a:hover {
   color: #7A9B76;
 }
+
+nav a[aria-current="page"] {
+  border-bottom-color: #344B3F;
+}
+
 
 /* Hero section */
 
@@ -71,27 +81,39 @@ nav a:hover {
 /* Footer */
 
 footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 13px;
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 0 40px;
+
+  border-top: 1px solid #A9BBA5;
   color: #6B7D70;
+  font-size: 13px;
 }
+
+footer p {
+  margin: 0;
+}
+
 
 /* Mobile layout */
 
 @media (max-width: 600px) {
   
 
-  header {
-    flex-direction: column;
-    gap: 20px;
-  }
+ 
+header {
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px 7.5%;
+}
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
+nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
 
   .hero h2 {
     font-size: 34px;
