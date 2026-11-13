@@ -281,15 +281,23 @@ footer {
 
 /* Mobile */
 
+/* Mobile Hero */
+
 @media (max-width: 600px) {
 
   .home-hero {
-    height: 500px;
+    height: 420px;
+  }
+
+  .home-hero-illustration {
+    background-size: auto 420px;
+    background-position: center center;
   }
 
   .home-hero-title {
-    font-size: clamp(38px, 9vw, 54px);
-    transform: translateY(35px);
+    font-size: clamp(36px, 10vw, 44px);
+    line-height: 1.05;
+    transform: none;
     white-space: normal;
   }
 
