@@ -298,11 +298,11 @@ footer {
     font-size: clamp(36px, 10vw, 44px);
     line-height: 1.05;
     transform: none;
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .home-hero-title span {
-    display: block;
+    display: inline;
   }
 
 }
